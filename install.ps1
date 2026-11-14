@@ -5,10 +5,10 @@ if (-not [Environment]::Is64BitOperatingSystem) {
 	throw 'JNH Optimisation requires 64-bit Windows.'
 }
 
-$downloadUrl = 'https://github.com/Ezioooooo/JNH-Optimisation-Toolbox/releases/latest/download/JNHOptimisation-Setup-1.0.1.exe'
-$expectedSha256 = '037461FE0EEC02284DE9D47D4BFC9A3026F81315FF78EF2D209B91A0AF54ABF6'
+$downloadUrl = 'https://github.com/Ezioooooo/JNH-Optimisation-Toolbox/releases/latest/download/JNHOptimisation-Setup-1.0.2.exe'
+$expectedSha256 = 'CBDA85982C0EAC31F2256A55F553CCFC176E831A8DFC7F818A4D086913440426'
 $tempDirectory = Join-Path ([System.IO.Path]::GetTempPath()) ('JNHOptimisation-' + [guid]::NewGuid().ToString('N'))
-$installerPath = Join-Path $tempDirectory 'JNHOptimisation-Setup-1.0.1.exe'
+$installerPath = Join-Path $tempDirectory 'JNHOptimisation-Setup-1.0.2.exe'
 
 New-Item -ItemType Directory -Path $tempDirectory | Out-Null
 try {
